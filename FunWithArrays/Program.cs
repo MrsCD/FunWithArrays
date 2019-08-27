@@ -19,7 +19,7 @@ namespace FunWithArrays
 
             if(evenNumbers.Length == 4)
             {
-                Console.WriteLine("Well done!");
+                Console.WriteLine("Good");
                 Console.ReadLine();
             }
 
