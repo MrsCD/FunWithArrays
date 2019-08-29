@@ -22,9 +22,6 @@ namespace FunWithArrays
                 Console.WriteLine("Good");
                 Console.ReadLine();
             }
-
-            throw new Exception($"Length '{evenNumbers.Length}' is not correct");
-
         }
     }
 }

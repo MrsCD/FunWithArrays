@@ -1,4 +1,6 @@
-﻿namespace FunWithArrays
+﻿using System;
+
+namespace FunWithArrays
 {
     /// <summary>
     /// FunMaker.
@@ -12,19 +14,30 @@
         internal int[] GetEvenNumbers()
         {
             int[] numbers =  { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-
-            for(int i = 0; i< numbers.Length; i++)
+            int[] even = new int[4];
+            int counter = 0;
+            try
             {
-                if(numbers[i] % 2 != 0)
+                for (int i = 0; i < numbers.Length; i++)
                 {
-                    // This option is not available
-                    // numbers[i].Remove();
+                    if (numbers[i] % 2 == 0)
+                    {
+                        System.Console.WriteLine(numbers[i]);
+                        even[i] = numbers[i];
+                    }
+
                 }
             }
+            catch
+            {
+               throw new IndexOutOfRangeException($"'{even}' array has a to high index");
+            }
+        
+            // Objective: Return array which contains only even numbers
 
-            // Objective: Return an which contains only even numbers
-
-            return numbers;
+            return even;
+           
         }
+       
     }
 }
